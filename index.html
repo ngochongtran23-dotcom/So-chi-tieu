@@ -8,15 +8,15 @@
 <link rel="icon" href="icon-192.png" type="image/png">
 <title>Sổ Chi Tiêu</title>
 <style>
-:root{--bg:#f6f4ef;--card:#fff;--ink:#252820;--muted:#77796f;--line:#e9e7df;--green:#526b52;--green2:#e7eee4;--orange:#bd6b35;--red:#b84444;--shadow:0 8px 24px rgba(35,38,28,.06)}
+:root{--bg:#fff5f5;--card:#fffdfb;--ink:#4b3037;--muted:#8f777e;--line:#f3dfe3;--green:#5f9b75;--green2:#e7f4e9;--orange:#c77b43;--red:#e65c7b;--shadow:0 8px 24px rgba(155,80,104,.09)}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:15px}
 .app{max-width:680px;margin:0 auto;padding:env(safe-area-inset-top) 16px calc(28px + env(safe-area-inset-bottom))}
 header{padding:22px 2px 15px;display:flex;align-items:center;justify-content:space-between;gap:12px}
 .eyebrow{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:700}
-h1{font-size:27px;letter-spacing:-.04em;margin:4px 0 0}h2{font-size:18px;margin:0 0 12px}h3{font-size:15px;margin:0}
+h1{font-size:27px;letter-spacing:-.04em;margin:4px 0 0} .hero{background:linear-gradient(135deg,#e87997,#d95f83)} .cat-icon{box-shadow:inset 0 0 0 1px #f7d6df} .card{border-radius:21px} .button{background:#e76587} .button.light{background:#ffe8ee;color:#a34a64} .tab.active{color:#d94e75}h2{font-size:18px;margin:0 0 12px}h3{font-size:15px;margin:0}
 .period{font-size:12px;color:var(--muted);margin-top:5px}
 .pill{background:var(--green2);color:var(--green);border-radius:99px;padding:8px 11px;font-weight:700;font-size:12px;white-space:nowrap}
-.tabs{display:flex;background:#eae8e0;padding:4px;border-radius:14px;gap:4px;margin:4px 0 16px}
+.tabs{display:flex;background:#f9e6eb;padding:4px;border-radius:14px;gap:4px;margin:4px 0 16px}
 .tab{flex:1;border:0;background:transparent;padding:11px 6px;border-radius:11px;font:inherit;font-weight:650;color:var(--muted);cursor:pointer}
 .tab.active{background:#fff;color:var(--ink);box-shadow:0 2px 7px #0000000b}
 .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:17px;margin-bottom:13px;box-shadow:var(--shadow)}
@@ -26,8 +26,8 @@ h1{font-size:27px;letter-spacing:-.04em;margin:4px 0 0}h2{font-size:18px;margin:
 .button{border:0;border-radius:12px;padding:12px 15px;background:var(--green);color:white;font:inherit;font-weight:700;cursor:pointer}
 .button.light{background:var(--green2);color:var(--green)}.button.full{width:100%}.button.danger{background:#f9e8e6;color:var(--red)}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.stat{padding:13px;border-radius:14px;background:#faf9f5}.stat .n{font-size:18px;font-weight:750;margin-top:5px}.muted{color:var(--muted);font-size:12px}
-.cat-row{display:grid;grid-template-columns:37px 1fr auto;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}.cat-row:last-child{border-bottom:0;padding-bottom:0}.cat-icon{height:37px;width:37px;display:grid;place-items:center;background:#f1f0e9;border-radius:12px;font-size:19px}.cat-name{font-weight:700}.cat-sub{font-size:12px;color:var(--muted);margin-top:3px}.cat-amount{text-align:right;font-weight:750;font-size:14px}
-.track{height:7px;background:#eeede7;border-radius:99px;overflow:hidden;margin-top:9px}.fill{height:100%;background:var(--green);border-radius:99px}.fill.warn{background:var(--orange)}.fill.over{background:var(--red)}
+.cat-row{display:grid;grid-template-columns:37px 1fr auto;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}.cat-row:last-child{border-bottom:0;padding-bottom:0}.cat-icon{height:37px;width:37px;display:grid;place-items:center;background:#ffe8ee;border-radius:12px;font-size:19px}.cat-name{font-weight:700}.cat-sub{font-size:12px;color:var(--muted);margin-top:3px}.cat-amount{text-align:right;font-weight:750;font-size:14px}
+.track{height:7px;background:#f8e8e8;border-radius:99px;overflow:hidden;margin-top:9px}.fill{height:100%;background:var(--green);border-radius:99px}.fill.warn{background:var(--orange)}.fill.over{background:var(--red)}
 .notice{padding:12px 14px;border-radius:14px;background:#fff0df;color:#8b4a1e;font-size:13px;margin-bottom:12px;line-height:1.45}.notice.red{background:#fbe8e7;color:#9e3434}.hidden{display:none!important}
 label{display:block;font-size:13px;font-weight:700;margin:0 0 7px}input,select,textarea{width:100%;border:1px solid #dfded5;background:#fff;border-radius:12px;padding:12px;font:inherit;color:var(--ink);outline:none}input:focus,select:focus,textarea:focus{border-color:var(--green)}.field{margin-bottom:13px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .row-between{display:flex;align-items:center;justify-content:space-between;gap:10px}.expense{display:flex;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}.expense:last-child{border:0}.expense .details{flex:1;min-width:0}.expense .reason{font-weight:650;overflow-wrap:anywhere}.expense .date{font-size:12px;color:var(--muted);margin-top:3px}.expense .money{font-weight:750;white-space:nowrap}.delete{border:0;background:transparent;color:#a4a49a;padding:6px;font-size:18px;cursor:pointer}.edit{border:0;background:#e7eee4;color:#526b52;border-radius:9px;padding:7px 9px;font-size:12px;font-weight:700;cursor:pointer}
@@ -39,8 +39,16 @@ label{display:block;font-size:13px;font-weight:700;margin:0 0 7px}input,select,t
 </head>
 <body>
 <div class="app">
-<header><div><div class="eyebrow">Gọn gàng · Dễ theo dõi</div><h1>Sổ Chi Tiêu 🌿</h1><div id="period" class="period"></div></div><div class="pill">VNĐ</div></header>
+<header><div><div class="eyebrow">Gọn gàng · Dễ theo dõi</div><h1>Sổ Chi Tiêu <span style="color:#e65c7b">♡</span> 🐱</h1><div id="period" class="period"></div></div><div class="pill">VNĐ</div></header>
 <nav class="tabs" aria-label="Điều hướng"><button class="tab active" data-tab="home">Tổng quan</button><button class="tab" data-tab="add">+ Ghi chi</button><button class="tab" data-tab="budget">Ngân sách</button><button class="tab" data-tab="report">Báo cáo</button></nav>
+<div class="card" style="padding:11px 12px;margin-bottom:13px;background:#fffafa">
+<div class="row-between" style="gap:8px">
+<button id="prevCycle" class="button light" aria-label="Tháng trước" style="padding:9px 12px">‹</button>
+<div style="text-align:center;min-width:0;flex:1"><div id="cycleLabel" style="font-weight:750">Kỳ chi tiêu</div><div id="cycleDates" class="muted" style="margin-top:3px"></div></div>
+<button id="nextCycle" class="button light" aria-label="Tháng sau" style="padding:9px 12px">›</button>
+</div>
+<div style="margin-top:10px"><label for="cycleSelect" style="font-size:11px;margin-bottom:5px;color:var(--muted)">Chọn tháng cần xem / chỉnh sửa</label><select id="cycleSelect" style="padding:9px 10px"></select></div>
+</div>
 <div id="alerts"></div>
 <section id="view-home">
 <div class="card hero"><div class="eyebrow">Đã chi trong kỳ này</div><div id="grandTotal" class="total">0 ₫</div><div class="hero-row"><small id="cycleText"></small><div style="text-align:right"><small>Còn lại theo ngân sách</small><div id="remaining" style="font-size:18px;font-weight:750;margin-top:3px">—</div></div></div></div>
@@ -72,20 +80,22 @@ label{display:block;font-size:13px;font-weight:700;margin:0 0 7px}input,select,t
 <div id="toast" class="hidden" role="status"></div>
 <script>
 const CATS=[
- {id:'husband',name:'Chi cho chồng',icon:'🧔'},
- {id:'child',name:'Chi cho con',icon:'🧸'},
- {id:'self',name:'Chi cho bản thân',icon:'🌷'},
- {id:'family',name:'Chi chung gia đình',icon:'🏡'}
+ {id:'husband',name:'Chi cho chồng',icon:'👦🏻'},
+ {id:'child',name:'Chi cho con',icon:'🧒🏻'},
+ {id:'self',name:'Chi cho bản thân',icon:'👧🏻'},
+ {id:'family',name:'Chi chung gia đình',icon:'🏠'}
 ];
 const DEFAULT_BUDGETS={husband:0,child:0,self:0,family:0};
 const KEY='soChiTieu_v1';
 let state={expenses:[],budgets:{...DEFAULT_BUDGETS},alerted:{}};
+let selectedCycleStart = null;
 try{const saved=JSON.parse(localStorage.getItem(KEY)||'null');if(saved&&Array.isArray(saved.expenses)){state={...state,...saved,budgets:{...DEFAULT_BUDGETS,...saved.budgets},alerted:saved.alerted||{}}}}catch(e){}
 const $=id=>document.getElementById(id);
 const money=n=>new Intl.NumberFormat('vi-VN',{style:'currency',currency:'VND',maximumFractionDigits:0}).format(n||0);
 const fmtDate=s=>{if(!s)return '';const [y,m,d]=s.split('-');return `${d}/${m}/${y}`};
 const todayStr=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`};
-function cycleFor(dateStr=todayStr()){let d=new Date(dateStr+'T12:00:00');let start=new Date(d.getFullYear(),d.getMonth(),d.getDate()>=6?6:6);if(d.getDate()<6)start.setMonth(start.getMonth()-1);let end=new Date(start.getFullYear(),start.getMonth()+1,5);return {start:`${start.getFullYear()}-${String(start.getMonth()+1).padStart(2,'0')}-06`,end:`${end.getFullYear()}-${String(end.getMonth()+1).padStart(2,'0')}-05`}}
+function cycleFor(dateStr){if(!dateStr) dateStr = selectedCycleStart || todayStr();let d=new Date(dateStr+'T12:00:00');let start=new Date(d.getFullYear(),d.getMonth(),d.getDate()>=6?6:6);if(d.getDate()<6)start.setMonth(start.getMonth()-1);let end=new Date(start.getFullYear(),start.getMonth()+1,5);return {start:`${start.getFullYear()}-${String(start.getMonth()+1).padStart(2,'0')}-06`,end:`${end.getFullYear()}-${String(end.getMonth()+1).padStart(2,'0')}-05`}}
+selectedCycleStart = cycleFor(todayStr()).start;
 function inCycle(e){const c=cycleFor();return e.date>=c.start&&e.date<=c.end}
 function expensesNow(){return state.expenses.filter(inCycle)}
 function totalFor(id,items=expensesNow()){return items.filter(e=>e.category===id).reduce((s,e)=>s+Number(e.amount),0)}
@@ -99,6 +109,11 @@ function checkAlerts(){const items=expensesNow();for(const c of CATS){const b=Nu
 function expenseHtml(e,canDelete=true){let c=cat(e.category);return `<div class="expense"><div class="cat-icon">${c.icon}</div><div class="details"><div class="reason">${esc(e.reason)}</div><div class="date">${c.name} · ${fmtDate(e.date)}</div></div><div class="money">${money(e.amount)}</div>${canDelete?`<button class="edit" data-edit="${e.id}" aria-label="Sửa khoản chi">Sửa</button><button class="delete" data-delete="${e.id}" aria-label="Xóa khoản chi">×</button>`:''}</div>`}
 function progress(c){let spent=totalFor(c.id),b=Number(state.budgets[c.id]||0),pct=b?spent/b*100:0;let cls=pct>=100?'over':pct>=70?'warn':'';return `<div class="cat-row"><div class="cat-icon">${c.icon}</div><div><div class="cat-name">${c.name}</div><div class="cat-sub">${b?`${money(spent)} / ${money(b)} · ${Math.floor(pct)}%`:`${money(spent)} · Chưa đặt budget`}</div>${b?`<div class="track"><div class="fill ${cls}" style="width:${Math.min(100,pct)}%"></div></div>`:''}</div><div class="cat-amount">${money(spent)}</div></div>`}
 function render(){const cy=cycleFor();$('period').textContent=`Kỳ chi tiêu: ${fmtDate(cy.start)} – ${fmtDate(cy.end)}`;$('cycleText').textContent=`${fmtDate(cy.start)} đến ${fmtDate(cy.end)}`;
+$('cycleLabel').textContent = new Intl.DateTimeFormat('vi-VN',{month:'long',year:'numeric'}).format(new Date(cy.start+'T12:00:00'));
+$('cycleDates').textContent = `${fmtDate(cy.start)} – ${fmtDate(cy.end)}`;
+const choices=[];const cur=new Date(selectedCycleStart+'T12:00:00');
+for(let i=18;i>=-3;i--){const d=new Date(cur.getFullYear(),cur.getMonth()+i,6);const val=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-06`;const end=new Date(d.getFullYear(),d.getMonth()+1,5);choices.push(`<option value="${val}" ${val===selectedCycleStart?'selected':''}>${new Intl.DateTimeFormat('vi-VN',{month:'long',year:'numeric'}).format(d)} · ${fmtDate(val)}–${fmtDate(`${end.getFullYear()}-${String(end.getMonth()+1).padStart(2,'0')}-05`)}</option>`);}
+$('cycleSelect').innerHTML=choices.join('');
 const items=expensesNow().sort((a,b)=>b.date.localeCompare(a.date)||b.created-b.created);$('grandTotal').textContent=money(grand(items));$('count').textContent=items.length;$('budgetTotal').textContent=totalBudget()?money(totalBudget()):'Chưa đặt';$('remaining').textContent=totalBudget()?money(totalBudget()-grand(items)):'—';
 $('homeCats').innerHTML=CATS.map(progress).join('');$('recent').innerHTML=items.length?items.slice(0,5).map(e=>expenseHtml(e)).join(''):'<div class="empty">Chưa có khoản chi trong kỳ này. Bấm “+ Ghi chi” để bắt đầu nhé.</div>';
 $('category').innerHTML=CATS.map(c=>`<option value="${c.id}">${c.icon} ${c.name}</option>`).join('');
@@ -107,14 +122,18 @@ $('reportSummary').innerHTML=`<div class="stat" style="margin-bottom:10px"><div 
 $('reportCount').textContent=`${items.length} khoản`;$('allExpenses').innerHTML=items.length?items.map(e=>expenseHtml(e)).join(''):'<div class="empty">Chưa có dữ liệu.</div>';
 let alerts=[];for(const c of CATS){const b=Number(state.budgets[c.id]||0),s=totalFor(c.id);if(b&&s>=b*.7){alerts.push({c,b,s,p:s/b*100})}}$('alerts').innerHTML=alerts.map(a=>`<div class="notice ${a.p>=100?'red':''}">${a.p>=100?'⚠️':'🔔'} <b>${a.c.name}</b>: đã dùng ${Math.floor(a.p)}% ngân sách (${money(a.s)} / ${money(a.b)}). ${a.p>=100?'Đã vượt ngân sách.':'Bạn đã chạm ngưỡng cảnh báo 70%.'}</div>`).join('');
 }
-function showTab(tab){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));['home','add','budget','report'].forEach(v=>$('view-'+v).classList.toggle('hidden',v!==tab));if(tab==='add'&&!$('date').value)$('date').value=todayStr();window.scrollTo({top:0,behavior:'smooth'})}
+function defaultDateForSelectedCycle(){return selectedCycleStart===cycleFor(todayStr()).start?todayStr():selectedCycleStart;}\nfunction showTab(tab){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));['home','add','budget','report'].forEach(v=>$('view-'+v).classList.toggle('hidden',v!==tab));if(tab==='add'&&!$('editId').value)$('date').value=defaultDateForSelectedCycle();window.scrollTo({top:0,behavior:'smooth'})}
 document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>showTab(b.dataset.tab)));
 document.querySelectorAll('[data-goto]').forEach(b=>b.addEventListener('click',()=>showTab(b.dataset.goto)));
 $('date').value=todayStr();
+function shiftCycle(amount){const d=new Date(selectedCycleStart+'T12:00:00');d.setMonth(d.getMonth()+amount);selectedCycleStart=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-06`;render();showTab('home');}
+$('prevCycle').addEventListener('click',()=>shiftCycle(-1));
+$('nextCycle').addEventListener('click',()=>shiftCycle(1));
+$('cycleSelect').addEventListener('change',e=>{selectedCycleStart=e.target.value;render();showTab('home');});
 $('expenseForm').addEventListener('submit',e=>{e.preventDefault();const amount=Number($('amount').value),reason=$('reason').value.trim(),date=$('date').value,category=$('category').value,editId=$('editId').value;if(!(amount>0)||!reason||!date)return;let message='Đã lưu khoản chi!';if(editId){const index=state.expenses.findIndex(x=>x.id===editId);if(index>=0){state.expenses[index]={...state.expenses[index],amount,reason,date,category};message='Đã cập nhật khoản chi!';}}else{state.expenses.push({id:Date.now().toString(36)+Math.random().toString(36).slice(2,6),amount,reason,date,category,created:Date.now()});}checkAlerts();save();render();cancelEdit();showTab('home');toast(message);});
 $('saveBudgets').addEventListener('click',()=>{document.querySelectorAll('[data-budget]').forEach(i=>state.budgets[i.dataset.budget]=Math.max(0,Number(i.value)||0));checkAlerts();save();render();toast('Đã lưu ngân sách!')});
 function startEdit(id){const item=state.expenses.find(x=>x.id===id);if(!item)return;$('editId').value=item.id;$('amount').value=item.amount;$('category').value=item.category;$('reason').value=item.reason;$('date').value=item.date;$('formTitle').textContent='Sửa khoản chi';$('submitExpense').textContent='Lưu thay đổi';$('cancelEdit').classList.remove('hidden');showTab('add');}
-function cancelEdit(){ $('editId').value='';$('expenseForm').reset();$('date').value=todayStr();$('formTitle').textContent='Ghi một khoản chi';$('submitExpense').textContent='Lưu khoản chi';$('cancelEdit').classList.add('hidden');}
+function cancelEdit(){ $('editId').value='';$('expenseForm').reset();$('date').value=defaultDateForSelectedCycle();$('formTitle').textContent='Ghi một khoản chi';$('submitExpense').textContent='Lưu khoản chi';$('cancelEdit').classList.add('hidden');}
 $('cancelEdit').addEventListener('click',cancelEdit);
 document.addEventListener('click',e=>{const edit=e.target.closest('[data-edit]');if(edit){startEdit(edit.dataset.edit);return;}const b=e.target.closest('[data-delete]');if(!b)return;const id=b.dataset.delete;if(confirm('Xóa khoản chi này nhé?')){state.expenses=state.expenses.filter(x=>x.id!==id);save();render();toast('Đã xóa khoản chi.')}});
 $('exportCsv').addEventListener('click',()=>{const rows=[['Ngày','Loại chi','Lý do','Số tiền (VND)'],...expensesNow().sort((a,b)=>a.date.localeCompare(b.date)).map(e=>[e.date,cat(e.category).name,e.reason,e.amount])];const csv='\ufeff'+rows.map(r=>r.map(v=>`"${String(v).replace(/"/g,'""')}"`).join(',')).join('\r\n');const blob=new Blob([csv],{type:'text/csv;charset=utf-8;'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=`so-chi-tieu-${cycleFor().start}.csv`;a.click();URL.revokeObjectURL(url)});
