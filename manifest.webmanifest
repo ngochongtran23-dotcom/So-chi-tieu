@@ -1,0 +1,27 @@
+{
+  "id": "./",
+  "name": "Sổ Chi Tiêu",
+  "short_name": "Chi Tiêu",
+  "description": "Quản lý chi tiêu gia đình theo kỳ từ ngày 6 đến ngày 5.",
+  "lang": "vi",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f6f4ef",
+  "theme_color": "#526b52",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
