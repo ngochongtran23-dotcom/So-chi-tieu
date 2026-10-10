@@ -122,7 +122,8 @@ $('reportSummary').innerHTML=`<div class="stat" style="margin-bottom:10px"><div 
 $('reportCount').textContent=`${items.length} khoản`;$('allExpenses').innerHTML=items.length?items.map(e=>expenseHtml(e)).join(''):'<div class="empty">Chưa có dữ liệu.</div>';
 let alerts=[];for(const c of CATS){const b=Number(state.budgets[c.id]||0),s=totalFor(c.id);if(b&&s>=b*.7){alerts.push({c,b,s,p:s/b*100})}}$('alerts').innerHTML=alerts.map(a=>`<div class="notice ${a.p>=100?'red':''}">${a.p>=100?'⚠️':'🔔'} <b>${a.c.name}</b>: đã dùng ${Math.floor(a.p)}% ngân sách (${money(a.s)} / ${money(a.b)}). ${a.p>=100?'Đã vượt ngân sách.':'Bạn đã chạm ngưỡng cảnh báo 70%.'}</div>`).join('');
 }
-function defaultDateForSelectedCycle(){return selectedCycleStart===cycleFor(todayStr()).start?todayStr():selectedCycleStart;}\nfunction showTab(tab){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));['home','add','budget','report'].forEach(v=>$('view-'+v).classList.toggle('hidden',v!==tab));if(tab==='add'&&!$('editId').value)$('date').value=defaultDateForSelectedCycle();window.scrollTo({top:0,behavior:'smooth'})}
+function defaultDateForSelectedCycle(){return selectedCycleStart===cycleFor(todayStr()).start?todayStr():selectedCycleStart;}
+function showTab(tab){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));['home','add','budget','report'].forEach(v=>$('view-'+v).classList.toggle('hidden',v!==tab));if(tab==='add'&&!$('editId').value)$('date').value=defaultDateForSelectedCycle();window.scrollTo({top:0,behavior:'smooth'})}
 document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>showTab(b.dataset.tab)));
 document.querySelectorAll('[data-goto]').forEach(b=>b.addEventListener('click',()=>showTab(b.dataset.goto)));
 $('date').value=todayStr();
